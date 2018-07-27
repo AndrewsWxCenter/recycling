@@ -1,0 +1,391 @@
+<html>
+
+
+<head>
+
+
+
+<!-- Reference to tables.css script in Hostinger File Manager -->
+    <link rel="stylesheet" type="text/css" href="https://www.andrewswxcenter.com/files/style.css">
+
+    <script src="tsorter.min.js" type="text/javascript"></script>
+
+    <script>
+
+function init() {
+    var sorter = tsorter.create('recycle');
+
+}
+
+tday=new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+tmonth=new Array("January","February","March","April","May","June","July","August","September","October","November","December");
+function GetClock(){
+var tzOffset = 0;
+var d=new Date();
+var dx=d.toGMTString();
+dx=dx.substr(0,dx.length -3);
+d.setTime(Date.parse(dx))
+d.setHours(d.getHours()+tzOffset);
+var nday=d.getDay(),nmonth=d.getMonth(),ndate=d.getDate(),nyear=d.getYear();
+if(nyear<1000) nyear+=1900;
+var nhour=d.getHours(),nmin=d.getMinutes(),nsec=d.getSeconds();
+if(nmin<=9) nmin="0"+nmin
+if(nsec<=9) nsec="0"+nsec;
+
+document.getElementById('clockbox').innerHTML=""+tday[nday]+", "+tmonth[nmonth]+" "+ndate+", "+nyear+" "+nhour+":"+nmin+":"+nsec+"";
+}
+
+var addFunctionOnWindowLoad = function(callback){
+      if(window.addEventListener){
+          window.addEventListener('load',callback,false);
+      }else{
+          window.attachEvent('onload',callback);
+      }
+}
+
+addFunctionOnWindowLoad(init);
+addFunctionOnWindowLoad(GetClock);
+
+    </script>
+
+</head>
+
+
+
+
+<body>
+
+<div>
+
+
+
+<table id="recycle" class="recycle">
+<thead>
+<tr>
+<th>Item</th>
+<th>Recyclable?</th>
+<th>Other Instructions/Tips</th>
+<th>Motivation</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Aerosol/Spraypaint Cans</td>
+<td>NO</td>
+<td>Avoid recycling these, as small amounts of aerosols can remain within the can</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Air Filter</td>
+<td>NO</td>
+<td>Generally, these are more of a hassle to recycle than it is worth</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Aluminum Foil</td>
+<td>YES</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Animal Bedding (Woodchips and Wood Shavings</td>
+<td>YES</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Batteries</td>
+<td>YES</td>
+<td>Tape the terminal ends of batteries 9V or larger before recycling; Car batteries require specialized deposit locations</td>
+<td>Trashing batteries or depositing them into a landfill can lead to leaching of harmful chemicals into soils or local water tables</td>
+</tr>
+<tr>
+<td>Boxboard/Chipboard (Cereal, Shoe, Gift Boxes)</td>
+<td>YES</td>
+<td>-</td>
+<td>Boxes can be repurposed</td>
+</tr>
+<tr>
+<td>Boxes with Wax Coating</td>
+<td>NO</td>
+<td>If you can scratch off the coating of a box with a fingernail, it is unacceptable for recycling</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Brightly Colored Paper</td>
+<td>NO</td>
+<td>Avoid recycling neon colored papers; dyes and pigments can be released causing discolored products</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Brown Paper Bags</td>
+<td>YES</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>CDs or DVDs</td>
+<td>NO</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Ceramic/Ovenware/Dishware</td>
+<td>NO</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Chip Bags</td>
+<td>NO</td>
+<td>Avoid recycling chip bags unless recyclability is explicitly stated on the bag</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Compact Fluorescent/LED Light Bulbs</td>
+<td>YES</td>
+<td>-</td>
+<td>Recycling CFLs and LED lights prevents the release of mercury into the hydrosphere and biosphere</td>
+</tr>
+<tr>
+<td>Cosmetics</td>
+<td>NO</td>
+<td>Proper disposal of cosmetics can be achieved by special drop-off programs at local grocery or department stores</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Crystal</td>
+<td>NO</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Fallen Tree Branches</td>
+<td>NO</td>
+<td>Keep all yard litter and leaves out of recycling repositories - Compost these instead</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Flower Pots</td>
+<td>NO</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Fruit Peels/Rinds</td>
+<td>NO</td>
+<td>Compost these! Putting food or liquid into recycling bins attracts rats, flies, and other unwanted guests</td>
+<td>Do NOT ever place food, liquid, or items with food residue into a recycling bin!</td>
+</tr>
+<tr>
+<td>Glass (Clear, Blue, Brown, Green)</td>
+<td>YES*</td>
+<td>About 61% of glass containers produced in the U.S. are clear, 31% are brown, and 7% green; *Green glass can only be recycled into more green glass, and other brightly colored glasses cannot be repurposed</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Hangers (Wire, Plastic, Wood)</td>
+<td>NO*</td>
+<td>*Check with your local recycling facility to see if they take wire hangers; Plastic hangers are very difficult to recycle efficiently and wood hangers cannot be recycled</td>
+<td>Hangers are better to only reduce and reuse... not recycle!</td>
+</tr>
+<tr>
+<td>Hardback Books</td>
+<td>NO</td>
+<td>Hardbound books usually have adhesive or a binding agent in the spine that makes recycling difficult</td>
+<td>Donate unused books to others who can read them</td>
+</tr>
+<tr>
+<td>Incandescent &quot;Old Style&quot; Lightbulbs</td>
+<td>NO</td>
+<td>Incandescent light bulbs contain metal parts and are not recyclable; Dispose of these in your garbage</td>
+<td>Consider switching to Compact Fluorescent Bulbs (CFLs), as they can save you an estimated $90-100 over the 10,000-hour lifespan of the CFL bulb</td>
+</tr>
+<tr>
+<td>Ink Pens</td>
+<td>NO</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Juice Boxes/Milk Cartons</td>
+<td>NO*</td>
+<td>*If the juice box or milk carton contains a shiny, waxy coating, then do not recycle these items</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Liquid Soap Bottles</td>
+<td>YES</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Magazines</td>
+<td>YES</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Margarine Tubs</td>
+<td>YES</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Mattresses</td>
+<td>YES</td>
+<td>-</td>
+<td>About 90% of a single mattress can be successfully recycled! The steel coils inside the mattress can even make you some pocket change at your local recycling center</td>
+</tr>
+<tr>
+<td>Medicine Bottles</td>
+<td>NO</td>
+<td>Proper disposal of medication and their containers is imperative to preventing health risks for animals in the environment and humans in the waste disposal industry</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Metal Caps from Glass Jars (Mason Jar lids)</td>
+<td>YES*</td>
+<td>*Metal caps must be placed in recycling bins separate from their jars</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Metal Food Cans</td>
+<td>YES</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Mirror Glass</td>
+<td>NO</td>
+<td>Once glass has been turned into a mirror, it cannot be recycled; Dispose of broken glass safely into your garbage bin</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Newspaper</td>
+<td>YES</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Paper</td>
+<td>YES</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Paper Egg Cartons</td>
+<td>NO</td>
+<td>Paper Egg Cartons have usually been recycled several times before, and the fibers within the carton are rendered weak, making them bad contenders for recycling</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Pizza Boxes with Food Residue</td>
+<td>NO</td>
+<td>If you refuse to take the time to clean the pizza box, then do not recycle it; If grease stains are present in the box, dispose of it in the garbage bin</td>
+<td>Do NOT ever place food or liquid into a recycling bin!</td>
+</tr>
+<tr>
+<td>Plastic Bottle Caps</td>
+<td>YES*</td>
+<td>*Check with your local recycling agency - earlier in the 21st century, bottle caps needed to be separated from their bottles, but some places do not require this anymore</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Plastic Grocery Bags</td>
+<td>NO</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Plastic Toys</td>
+<td>NO</td>
+<td>-</td>
+<td>Donate or repurpose these items!</td>
+</tr>
+<tr>
+<td>Pots/Pans/Kitchen Utensils</td>
+<td>YES</td>
+<td>-</td>
+<td>Donate or repurpose these items!</td>
+</tr>
+<tr>
+<td>Pyrex/Heat Resistant Glass</td>
+<td>NO</td>
+<td>-</td>
+<td>If these glasses and dishes are made to withstand up to 500 degree Fahrenheit heat in the oven, imagine trying to recycle them!</td>
+</tr>
+<tr>
+<td>Shredded Paper</td>
+<td>NO!</td>
+<td>! - Shredded paper is one of the products most commonly disposed of improperly; Shredding paper destroys the fibers that make recycling paper worthwhile - If you shred paper, then throw it away</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Styrofoam</td>
+<td>NO</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Thin Paper Cups</td>
+<td>NO</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Tire shrapnel</td>
+<td>NO</td>
+<td>Tires prove to be one of the most difficult materials to recycle</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Used Napkins</td>
+<td>NO</td>
+<td>-</td>
+<td>Do NOT ever place food, liquid, or items with food residue into a recycling bin!</td>
+</tr>
+<tr>
+<td>Used Paper Plates</td>
+<td>NO</td>
+<td>-</td>
+<td>Do NOT ever place food or liquid, or items with food residue into a recycling bin!</td>
+</tr>
+<tr>
+<td>Used Tissues/Kleenex</td>
+<td>NO</td>
+<td>-</td>
+<td>Do NOT ever place materials with bodily fluids into a recycling bin!</td>
+</tr>
+<tr>
+<td>Wax Paper</td>
+<td>NO</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Wrapping Paper</td>
+<td>NO</td>
+<td>The waxy coating on wrapping paper makes recycling this material difficult to recycle and cost prohibitive</td>
+<td>Use it next Christmas!</td>
+</tr>
+<tr>
+<td>Yard Clippings</td>
+<td>NO</td>
+<td>Keep all yard litter / leaves out of recycling repositories; Compost these instead</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+
+
+
+
+
+</div>
+
+
+
+</body>
+</html>
